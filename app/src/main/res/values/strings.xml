@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Brake Pad Life Calculator</string>
+    <string name="bplf">Brake Pad Life Calculator</string>
+    <string name="current_bp">What is the current measurement?</string>
+    <string name="bp_unit">mm</string>
+    <string name="current_mileage">What is the current mileage?</string>
+    <string name="mileage_unit">km</string>
+    <string name="previous_bp">What is the previous measurement?</string>
+    <string name="bp_limit">What is the Brake Pad Limit?</string>
+    <string name="calculate_button">Calculate</string>
+    <string name="bp_wear_rate">Brake Pad Wear Rate (mm/10000km)</string>
+    <string name="expected_mileage">Expected Brake Pad Mileage (km)</string>
+    <string name="previous_mileage">What is the previous mileage?</string>
+    <string name="default_bp_limit">2</string>
+    <string name="default_previous_mileage">0</string>
+    <string name="default_bp">11</string>
+</resources>

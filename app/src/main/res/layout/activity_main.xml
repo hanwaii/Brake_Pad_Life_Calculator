@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/app_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/bplf"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/current_bp_measurement_text"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="@string/current_bp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/app_title" />
+
+        <EditText
+            android:id="@+id/bp_current_measurement"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:gravity="right"
+            android:hint="@string/bp_unit"
+            android:importantForAutofill="no"
+            android:inputType="numberDecimal"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/app_title" />
+
+        <TextView
+            android:id="@+id/current_mileage_measurement_text"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="@string/current_mileage"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/current_bp_measurement_text" />
+
+        <EditText
+            android:id="@+id/current_mileage_measurement"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:gravity="right"
+            android:hint="@string/mileage_unit"
+            android:importantForAutofill="no"
+            android:inputType="numberDecimal"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bp_current_measurement" />
+
+        <TextView
+            android:id="@+id/previous_bp_measurement_text"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="@string/previous_bp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/current_mileage_measurement_text" />
+
+        <EditText
+            android:id="@+id/bp_previous_measurement"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:gravity="right"
+            android:hint="@string/bp_unit"
+            android:importantForAutofill="no"
+            android:inputType="numberDecimal"
+            android:text="@string/default_bp"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/current_mileage_measurement" />
+
+        <TextView
+            android:id="@+id/previous_mileage_measurement_text"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="@string/previous_mileage"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/previous_bp_measurement_text" />
+
+        <EditText
+            android:id="@+id/previous_mileage_measurement"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:gravity="right"
+            android:hint="@string/mileage_unit"
+            android:importantForAutofill="no"
+            android:inputType="numberDecimal"
+            android:text="@string/default_previous_mileage"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bp_previous_measurement" />
+
+        <TextView
+            android:id="@+id/bp_limit_text"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="@string/bp_limit"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/previous_mileage_measurement_text" />
+
+        <EditText
+            android:id="@+id/bp_limit"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:gravity="right"
+            android:hint="@string/bp_unit"
+            android:importantForAutofill="no"
+            android:inputType="numberDecimal"
+            android:text="@string/default_bp_limit"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/previous_mileage_measurement" />
+
+        <Button
+            android:id="@+id/calculate_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/calculate_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bp_limit_text" />
+
+        <TextView
+            android:id="@+id/bp_wear_rate_text"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="@string/bp_wear_rate"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/calculate_button" />
+
+        <TextView
+            android:id="@+id/bp_wear_rate_result"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/calculate_button"
+            tools:text="mm/10000km" />
+
+        <TextView
+            android:id="@+id/bp_wear_mileage_text"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="@string/expected_mileage"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bp_wear_rate_text" />
+
+        <TextView
+            android:id="@+id/bp_wear_mileage_result"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bp_wear_rate_result"
+            tools:text="km" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
